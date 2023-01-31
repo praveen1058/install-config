@@ -1,0 +1,40 @@
+1. First we update the system.
+#apt-get update -y
+#apt-get upgrade -y
+
+2.install java on ubuntu
+#apt-get install default-jdk -y
+
+
+3. Check Java is installed
+#java -version
+
+4. Download apache solr package
+#wget https://archive.apache.org/dist/lucene/solr/8.6.0/solr-8.6.0.tgz
+
+5. extract the downloaded file
+#tar xzf solr-8.6.0.tgz
+
+6. run the below command for installation of solr
+bash solr-8.6.0/bin/install_solr_service.sh solr-8.6.0.tgz
+
+7. check the open port for default port of solr service
+netstat -tunelp | grep 8983
+
+8. for stopping the solr service
+systemctl stop solr
+
+9. for start the solr service
+systemctl start solr
+
+10.for checking the status of solr service
+systemctl status solr
+
+11. for enable to solr service
+systemctl enable solr
+
+12.to create solr collection
+su - solr -c "/opt/solr/bin/solr create -c mytestcollection -n data_driven_schema_configs"
+
+13.to check solr type on browser.
+http://your-server-ip:8983/solr. 
