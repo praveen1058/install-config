@@ -1,0 +1,57 @@
+How to install VirtualBox, Vagrant and a Virtual Machine in Windows 10
+
+1.	First Download the virtual box from official website for windows.
+https://www.virtualbox.org/wiki/Downloads
+
+ 
+
+
+2.	Install Virtual Box with default setting next -next button.
+
+
+ 
+
+3.Download Vagrant from official site for windows according to os type.
+https://developer.hashicorp.com/vagrant/downloads
+
+ 
+4.Install the Vagrant by just clicking next button.
+ 
+5. After installation of both, Restart the system.
+6. Open command prompt .
+(Windows + r and type cmd then Enter)
+7. create one folder and enter that folder .
+mkdir VirtualBox
+cd VirtualBox
+  
+8. Create another folder in this directory and enter that folder.
+mkdir ubuntu14
+cd ubuntu14
+ 
+9. now download ubuntu iso using command
+vagrant box add ubuntu/trusty64
+ 
+10. After successfully add  initialize iso using command.
+vagrant init ubuntu/trusty64
+ 
+11. After that install vagrant plugin using command
+vagrant plugin install vagrant-vbguest
+
+ 
+12. Now run the command vagrant up , it start the virtual machine in  virtual box in backend.
+ vagrant up
+
+
+
+
+ 
+
+
+13. Now login to virtual machine using command
+vagrant ssh
+ 
+
+14. Now you are login successfully. For checking type any linux command like pwd , ls.
+15. for logout type exit and for poweroff type vagrant halt
+ 
+
