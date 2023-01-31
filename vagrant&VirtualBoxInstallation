@@ -3,13 +3,8 @@ How to install VirtualBox, Vagrant and a Virtual Machine in Windows 10
 1.	First Download the virtual box from official website for windows.
 https://www.virtualbox.org/wiki/Downloads
 
- 
+ 2.	Install Virtual Box with default setting next -next button.
 
-
-2.	Install Virtual Box with default setting next -next button.
-
-
- 
 
 3.Download Vagrant from official site for windows according to os type.
 https://developer.hashicorp.com/vagrant/downloads
@@ -42,16 +37,15 @@ vagrant plugin install vagrant-vbguest
  vagrant up
 
 
-
-
- 
-
-
 13. Now login to virtual machine using command
 vagrant ssh
  
 
 14. Now you are login successfully. For checking type any linux command like pwd , ls.
 15. for logout type exit and for poweroff type vagrant halt
+
+For refrence with screenshot please check uploaded file in same directory.
+https://github.com/praveen1058/install-config/blob/main/Vagrant%26VirtualBoxInstallationWithScreenshot.docx
+
  
 
