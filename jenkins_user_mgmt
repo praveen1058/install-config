@@ -1,0 +1,21 @@
+For creating new user, we go to manage jenkins and then users.
+Here we can create/delete/modify the users.
+
+
+By default user have full permission due to jenkins defualt setting of Authorization is "logged user can do anything".
+
+If we want to manage user permission as per requirement . 
+we need to install plugin "Role-based Authorization Strategy" and then change the authorization setting "role based stategy" under security.
+
+Now we go to manage and assign roles.
+
+We have three user , tech1, dev1 and test1. we need to provide tech1 user for full admin access.
+dev1 user can do tast related to dev job (dev1, dev2, dev3) and test1 user can do job related to test(test1,test2,test3).
+For this we go to Manage and assign roles section and then manage roles. Here we create global role - techteam and specific.
+In techteam, we assign overall administrater access. for specific we assign overall read permission.
+
+After that we create item role developer and tester, here we enter pattern dev.* for developer and test.* patteren for tester.
+Now we go assign role and add users (tech1, dev1, test1) in global role and click on related field . tech1 to techteam, dev1 and test1 to specific.
+After we add users(dev1 and test1) in item role and assign dev1 to developer and test1 to tester.
+Here we done. We test after login to specific user logins.
+
